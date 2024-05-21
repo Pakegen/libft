@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: quenalla <quenalla@student.42.fr>          +#+  +:+       +#+        */
+/*   By: quenalla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/21 08:07:52 by quenalla          #+#    #+#             */
-/*   Updated: 2024/05/21 12:11:47 by quenalla         ###   ########.fr       */
+/*   Created: 2024/05/21 09:16:39 by quenalla          #+#    #+#             */
+/*   Updated: 2024/05/21 09:38:15 by quenalla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stddef.h>
+#include <stddef.h>
 
-char	*ft_strrchr(const char *s, int c)
+void	*memmove(void *dest, const void *src, size_t n)
 {
-	const char	*str;
+	size_t	i;
+	unsigned char	*destc;
+	const unsigned *srcc;
 
-	str = NULL;
-	while (*s != '\0')
+	i = 0;
+	destc = (unsigned char *) dest;
+	srcc = (const unsigned char *) src;
+	while (dest[i])
 	{
-		if (*s == c)
-		{
-			str = s;
-		}
-		s++;
+
 	}
-	if (c == '\0')
-		return (NULL);
-	if (*str == c)
-		return ((char *)str);
-	return (0);
 }

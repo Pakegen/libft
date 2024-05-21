@@ -1,33 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: quenalla <quenalla@student.42.fr>          +#+  +:+       +#+        */
+/*   By: quenalla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/21 08:07:52 by quenalla          #+#    #+#             */
-/*   Updated: 2024/05/21 12:11:47 by quenalla         ###   ########.fr       */
+/*   Created: 2024/05/17 13:00:21 by quenalla          #+#    #+#             */
+/*   Updated: 2024/05/21 14:25:24 by quenalla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stddef.h>
-
-char	*ft_strrchr(const char *s, int c)
+void	ft_bzero(void *s, size_t n)
 {
-	const char	*str;
+	unsigned int	i;
 
-	str = NULL;
-	while (*s != '\0')
+	i = 0;
+	while (i < n)
 	{
-		if (*s == c)
-		{
-			str = s;
-		}
-		s++;
+		s[i] = '\0';
+		i++;
 	}
-	if (c == '\0')
-		return (NULL);
-	if (*str == c)
-		return ((char *)str);
-	return (0);
 }

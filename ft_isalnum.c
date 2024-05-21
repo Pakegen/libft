@@ -1,33 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: quenalla <quenalla@student.42.fr>          +#+  +:+       +#+        */
+/*   By: quenalla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/21 08:07:52 by quenalla          #+#    #+#             */
-/*   Updated: 2024/05/21 12:11:47 by quenalla         ###   ########.fr       */
+/*   Created: 2024/05/17 11:29:02 by quenalla          #+#    #+#             */
+/*   Updated: 2024/05/17 15:41:19 by quenalla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stddef.h>
-
-char	*ft_strrchr(const char *s, int c)
+int	ft_isalnum(int c)
 {
-	const char	*str;
-
-	str = NULL;
-	while (*s != '\0')
-	{
-		if (*s == c)
-		{
-			str = s;
-		}
-		s++;
-	}
-	if (c == '\0')
-		return (NULL);
-	if (*str == c)
-		return ((char *)str);
+	if (c >= '0' && c <= '9')
+		return (1);
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+		return (1);
 	return (0);
 }

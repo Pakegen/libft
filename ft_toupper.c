@@ -1,33 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: quenalla <quenalla@student.42.fr>          +#+  +:+       +#+        */
+/*   By: quenalla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/21 08:07:52 by quenalla          #+#    #+#             */
-/*   Updated: 2024/05/21 12:11:47 by quenalla         ###   ########.fr       */
+/*   Created: 2024/05/17 14:04:16 by quenalla          #+#    #+#             */
+/*   Updated: 2024/05/17 14:08:57 by quenalla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stddef.h>
-
-char	*ft_strrchr(const char *s, int c)
+int	toupper(int c)
 {
-	const char	*str;
-
-	str = NULL;
-	while (*s != '\0')
-	{
-		if (*s == c)
-		{
-			str = s;
-		}
-		s++;
-	}
-	if (c == '\0')
-		return (NULL);
-	if (*str == c)
-		return ((char *)str);
-	return (0);
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
 }
