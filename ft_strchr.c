@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: quenalla <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: qacjl <qacjl@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 18:57:27 by quenalla          #+#    #+#             */
-/*   Updated: 2024/05/21 08:07:14 by quenalla         ###   ########.fr       */
+/*   Updated: 2024/05/22 14:21:56 by qacjl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,17 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *) s);
 		s++;
 	}
-	if (c == '\0')
-		return (NULL);
-	return (0);
+	return (NULL);
+}
+
+#include<stdio.h>
+
+int main()
+{
+	char str[] = "le Chat est dehors";
+	printf("%s", ft_strchr(str, 'C'));
+	printf("%s", ft_strchr(str, '\0'));
+	printf("%s", ft_strchr(str, 'T'));
+
+
 }
