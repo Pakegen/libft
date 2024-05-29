@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: quenalla <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: quenalla <quenalla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 10:49:13 by quenalla          #+#    #+#             */
-/*   Updated: 2024/05/21 08:51:13 by quenalla         ###   ########.fr       */
+/*   Updated: 2024/05/28 07:34:02 by quenalla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include"libft.h"
 
 int	ft_atoi(const char *nptr)
 {

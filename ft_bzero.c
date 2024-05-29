@@ -6,7 +6,7 @@
 /*   By: qacjl <qacjl@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 13:00:21 by quenalla          #+#    #+#             */
-/*   Updated: 2024/05/22 16:44:17 by qacjl            ###   ########.fr       */
+/*   Updated: 2024/05/29 11:20:15 by qacjl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char	*i;
+	unsigned char	*ptr;
 
-	i = s;
+	ptr = (unsigned char *)s;
 	while (0 < n)
 	{
-		*i = '\0';
-		i++;
+		*ptr = '\0';
+		n--;
+		ptr++;
 	}
 }
-

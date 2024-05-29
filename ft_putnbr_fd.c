@@ -1,25 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qacjl <qacjl@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/17 14:16:20 by quenalla          #+#    #+#             */
-/*   Updated: 2024/05/29 11:33:14 by qacjl            ###   ########.fr       */
+/*   Created: 2024/05/28 10:52:48 by quenalla          #+#    #+#             */
+/*   Updated: 2024/05/29 14:17:36 by qacjl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	ft_putnbr_fd(int n, int fd)
 {
-	while ((*s1 || *s2) && n-- > 0)
+	long int	compteur;
+
+	compteur = 1;
+	if (n == 0)
 	{
-		if (*s1 != *s2)
-			return (*s1 - *s2);
-		s1++;
-		s2++;
+		return (ft_putchar_fd('0', fd));
 	}
-	return (0);
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		n = -n;
+	}
+	while (compteur <= n)
+		compteur = compteur * 10;
+	while (compteur > 1)
+	{
+		compteur = compteur / 10;
+		ft_putchar_fd((n / compteur) + '0', fd);
+		n = n % compteur;
+	}
 }

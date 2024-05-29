@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: qacjl <qacjl@student.42.fr>                +#+  +:+       +#+        */
+/*   By: quenalla <quenalla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 14:21:57 by qacjl             #+#    #+#             */
-/*   Updated: 2024/05/27 15:42:18 by qacjl            ###   ########.fr       */
+/*   Updated: 2024/05/28 15:08:54 by quenalla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,26 +17,26 @@ int	ft_setting(char c, char const *set)
 	int	i;
 
 	i = 0;
-	while(set[i])
+	while (set[i])
 	{
 		if (set[i] == c)
-			return(1);
+			return (1);
 		i++;
 	}
 	return (0);
 }
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*str;
-	int				i;
-	int				start;
-	int				end;
+	int		i;
+	int		start;
+	int		end;
 
 	i = 0;
 	start = 0;
 	end = 0;
-	while(s1[end])
+	while (s1[end])
 		end++;
 	while (s1[start] && (ft_setting(s1[start], set) == 1))
 		start++;
@@ -49,11 +49,4 @@ char *ft_strtrim(char const *s1, char const *set)
 		str[i++] = s1[start++];
 	str[i] = '\0';
 	return (str);
-}
-
-int main()
-{
-	char str[] = " h  e  HELLO WORLD  d  e  h ";
-	char set[] = " he ";
-	printf("%s", ft_strtrim(str, set));
 }

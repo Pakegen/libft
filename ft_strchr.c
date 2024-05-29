@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: qacjl <qacjl@student.42.fr>                +#+  +:+       +#+        */
+/*   By: quenalla <quenalla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 18:57:27 by quenalla          #+#    #+#             */
-/*   Updated: 2024/05/22 14:21:56 by qacjl            ###   ########.fr       */
+/*   Updated: 2024/05/28 07:37:10 by quenalla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stddef.h>
+#include"libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -21,16 +21,4 @@ char	*ft_strchr(const char *s, int c)
 		s++;
 	}
 	return (NULL);
-}
-
-#include<stdio.h>
-
-int main()
-{
-	char str[] = "le Chat est dehors";
-	printf("%s", ft_strchr(str, 'C'));
-	printf("%s", ft_strchr(str, '\0'));
-	printf("%s", ft_strchr(str, 'T'));
-
-
 }

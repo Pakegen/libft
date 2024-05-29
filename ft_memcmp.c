@@ -6,7 +6,7 @@
 /*   By: qacjl <qacjl@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 23:07:49 by qacjl             #+#    #+#             */
-/*   Updated: 2024/05/22 23:18:19 by qacjl            ###   ########.fr       */
+/*   Updated: 2024/05/29 11:21:41 by qacjl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 
 	p1 = (unsigned char *)s1;
 	p2 = (unsigned char *)s2;
-	while(n > 0)
+	while (n > 0)
 	{
 		if (p1 != p2)
 			return (p1 - p2);
@@ -27,5 +27,5 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		p2++;
 		n--;
 	}
-	return (NULL);
+	return (0);
 }
